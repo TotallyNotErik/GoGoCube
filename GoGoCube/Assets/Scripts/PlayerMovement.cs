@@ -19,12 +19,12 @@ public class PlayerMovement : MonoBehaviour
         set 
         {
             thing = value;
+            CancelInvoke();
             if(thing == -1)
                 this.transform.gameObject.GetComponent<Renderer>().material = matBlue;
             if(thing == 1)
                 this.transform.gameObject.GetComponent<Renderer>().material = matPink;
-            if(thing == 0)
-                this.transform.gameObject.GetComponent<Renderer>().material = matDefault;
+            Invoke("ResetMaterial", 0.5f);
         }
     }
     private float _pos;
@@ -53,6 +53,11 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(0,0,forwardForce * speedMultiplier * Time.fixedDeltaTime);
     }
 
+    void ResetMaterial()
+    {
+        this.transform.gameObject.GetComponent<Renderer>().material = matDefault;
+    }
+
 
     void Update()
     {
@@ -69,8 +74,6 @@ public class PlayerMovement : MonoBehaviour
             gateCheck = -1;
         else if(Input.GetKey(KeyCode.J))
             gateCheck = 1;
-        else
-            gateCheck = 0;
-            
+   
     }
 }
