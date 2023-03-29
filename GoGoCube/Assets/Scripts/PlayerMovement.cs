@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     void ResetMaterial()
     {
         this.transform.gameObject.GetComponent<Renderer>().material = matDefault;
+        thing = 0;
     }
 
 

@@ -15,6 +15,35 @@ MonoBehaviour:
   settings:
   - {fileID: 4406358993851429332}
   - {fileID: 3489993897530712449}
+  - {fileID: 2559553583981880107}
+--- !u!114 &2559553583981880107
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  focusDistance:
+    overrideState: 0
+    value: 10
+  aperture:
+    overrideState: 0
+    value: 5.6
+  focalLength:
+    overrideState: 0
+    value: 50
+  kernelSize:
+    overrideState: 0
+    value: 1
 --- !u!114 &3489993897530712449
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -32,26 +61,26 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   preset:
-    overrideState: 0
-    value: 2
+    overrideState: 1
+    value: 6
   maximumIterationCount:
-    overrideState: 0
-    value: 16
+    overrideState: 1
+    value: 256
   resolution:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 1
   thickness:
-    overrideState: 0
-    value: 8
+    overrideState: 1
+    value: 9.4
   maximumMarchDistance:
-    overrideState: 0
+    overrideState: 1
     value: 100
   distanceFade:
-    overrideState: 0
-    value: 0.5
+    overrideState: 1
+    value: 1
   vignette:
-    overrideState: 0
-    value: 0.5
+    overrideState: 1
+    value: 1
 --- !u!114 &4406358993851429332
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -70,7 +99,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.25
+    value: 1
   threshold:
     overrideState: 1
     value: 1

@@ -10,8 +10,18 @@ public class ColorScreen : MonoBehaviour
     void OnTriggerEnter(Collider other) 
     {
         if(player.gateCheck != match)
-            player.speedMultiplier += .25f;
+        {
+            CancelInvoke();
+            player.speedMultiplier += 1f;
+            Invoke("ResetSpeed", 10f);
+        }
+
 
         this.gameObject.SetActive(false);
+    }
+
+    public void ResetSpeed()
+    {
+        player.speedMultiplier = 1f;
     }
 }
